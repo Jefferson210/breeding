@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+<!--
+            <div class="panel-heading">
+
+            </div>
+-->
+
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item">Origin:
+                        <span><strong><%= @sowing.origin %></strong></span>  
+                    </li>
+
+                    <li class="list-group-item">NumSeed:
+                        <span><strong> <%= @sowing.numSeed %></strong></span>  
+                    </li>
+
+                    <li class="list-group-item">Weight:
+                        <span><strong> <%= @sowing.weight %></strong></span>  
+                    </li>
+
+                    <li class="list-group-item">Week:
+                        <span><strong> <%= @sowing.week %></strong></span>  
+                    </li>
+
+                    <li class="list-group-item">Hydratation:
+                        <span><strong><%= @sowing.hydratation %></strong></span>  
+                    </li>
+
+                    <li class="list-group-item">Calendar:
+                        <span><strong><%= @sowing.calendar %></strong></span>  
+                    </li>
+                </ul>
+            </div>
+
+            <div class="panel-footer">
+                <%= link_to edit_sowing_path(@sowing) do%>
+                <span class="glyphicon glyphicon-edit" title="editar"></span>
+                <%end%>
+                <%= link_to sowings_path do%>
+                <span class="glyphicon glyphicon-arrow-left no-hover" title="atras" ></span>
+                <%end%>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

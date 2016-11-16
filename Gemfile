@@ -23,9 +23,9 @@ group :development, :test do
 end
 
 # Add support for the MySQL
-group :production, :mysql do
-  gem 'mysql2'
-end
+#group :production, :mysql do
+#  gem 'mysql2'
+#end
 
 group :production, :postgresql do
   gem 'pg'
@@ -65,4 +65,7 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'paperclip', '~> 4.0'
+gem 'bootstrap-sass', '~> 3.2.0' #bootstrap para rails
 

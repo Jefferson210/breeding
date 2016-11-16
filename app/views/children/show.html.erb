@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="text-left"><%= @child.crossing ? @child.crossing.codeCrossing : 'N/A' %></h2>
+            </div>
+
+            <div class="panel-body">
+                <div class="image-rose">
+                    <center>
+                        <%= image_tag @child.image.url() %>
+                    </center>
+                </div>
+                <br>
+                <ul class="list-group">
+                    <li class="list-group-item">Code Crossing:
+                        <span><strong><%= @child.crossing ? @child.crossing.codeCrossing : 'N/A' %></strong></span>
+                    </li>
+
+                    <li class="list-group-item">Num Individuals:
+                        <span><strong><%= @child.numIndividuals %></strong></span>
+                    </li>
+
+                    <li class="list-group-item">Color:
+                        <span><strong><%= @child.color ? @child.color.colorName : 'N/A' %></strong></span>
+                    </li>
+
+                    <li class="list-group-item">Head Size:
+                        <span><strong><%= @child.headSize %></strong></span>
+                    </li>
+
+                    <li class="list-group-item">Num Flowering:
+                        <span><strong><%= @child.numFlowering %></strong></span>
+                    </li>
+
+                    <li class="list-group-item">Num Petals:
+                        <span><strong><%= @child.numPetals %></strong></span>
+                    </li>
+
+                    <li class="list-group-item">Form:
+                        <span><strong><%= @child.form %></strong></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="panel-footer">
+                <%= link_to edit_child_path(@child) do%> 
+                <span class="glyphicon glyphicon-edit" title="editar"></span>
+                <%end%>
+                <%= link_to children_path do%>
+                <span class="glyphicon glyphicon-arrow-left no-hover" title="atras" ></span>
+                <%end%>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

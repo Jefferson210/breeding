@@ -1,0 +1,1 @@
+json.extract! @crossing, :id, :codeCrossing, :numCrossing, :year, :week, :effective, :percentageEffective, :dateHarvest, :numSeed, :father, :fatherPicture, :mother, :motherPicture, :created_at, :updated_at
