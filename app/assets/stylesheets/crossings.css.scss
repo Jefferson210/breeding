@@ -5,3 +5,44 @@
 .table th, td{
     text-align: center;
 }
+
+.glyphicon{
+    font-size: 20px; 
+}
+
+a:hover {
+    color: #1762a2;
+    background-color: #fff;
+}
+
+.glyphicon-file {
+    font-size: 30px; 
+}
+
+.glyphicon-arrow-left {
+    font-size: 25px; 
+}
+
+.glyphicon-eye-open {
+    font-size: 25px; 
+}
+
+.image-rose img {
+    width: 250px;
+    height: auto;
+}
+
+//===============Validates errors====================
+#error_explanation {
+    color: red;
+    border: 1px solid red;
+    ul {
+        color: red;
+        margin: 0 0 18px 0;
+    }
+}
+.field_with_errors {
+    @extend .has-error;
+    background-color: white;
+    display: block;
+}

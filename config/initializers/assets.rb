@@ -9,3 +9,5 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( crossings.js)
 Rails.application.config.assets.precompile += %w( crossings.css)
 Rails.application.config.assets.precompile += %w( genetic_banks.css)
+Rails.application.config.assets.precompile += %w( sowings.css)
+Rails.application.config.assets.precompile += %w( children.css)
