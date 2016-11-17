@@ -4,9 +4,8 @@
 <h1 class="alert alert-success text-center">Crossings</h1>
 
 <div class="text-center">
-    <%= link_to new_crossing_path do%>
-    <span class="glyphicon glyphicon-file " data-toggle="tooltip" title="nuevo"></span>
-    <%end%>
+    <h3><%= link_to 'New',new_crossing_path %></h3>
+
 </div>
 
 <table class="table table-hover">
@@ -40,13 +39,8 @@
             <td><%= crossing.mother %></td>
             <td><%= crossing.dateHarvest %></td>
             <!--            <td>< link_to 'Show', crossing %></td>-->
-            <td><%= link_to edit_crossing_path(crossing) do%>
-                <span class="glyphicon glyphicon-edit" data-toggle="tooltip" title="editar"></span>
-                <% end %>
-            </td>
-            <td><%= link_to crossing, method: :delete, data: { confirm: 'Are you sure?' } do%>
-                <span class="glyphicon glyphicon-remove-sign" data-toggle="tooltip" title="eliminar"></span>
-                <% end %>
+            <td><%= link_to 'Edit', edit_crossing_path(crossing) %></td>
+            <td><%= link_to 'Delete', crossing, method: :delete, data: { confirm: 'Are you sure?' } %>
             </td>
         </tr>
         <% end %>

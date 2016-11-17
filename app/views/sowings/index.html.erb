@@ -3,9 +3,8 @@
 <h1 class="alert alert-success text-center">Sowings</h1>
 
 <div class="text-center">
-    <%= link_to new_sowing_path do %>
-    <span class="glyphicon glyphicon-file " data-toggle="tooltip" title="nuevo"></span>
-    <% end %>
+    <h3><%= link_to 'New', new_sowing_path  %></h3>
+
 </div>
 
 <table class="table table-hover text-center">
@@ -30,17 +29,14 @@
             <td><%= sowing.week %></td>
             <td><%= sowing.hydratation %></td>
             <td><%= sowing.calendar %></td>
-            <td><%= link_to sowing do%>
-                <span class="glyphicon glyphicon-eye-open" data-toggle="tooltip" title="ver"></span>
-                <%end%>
+            <td><%= link_to 'Show', sowing %>
+                
             </td>
-            <td><%= link_to edit_sowing_path(sowing) do%>
-                <span class="glyphicon glyphicon-edit" data-toggle="tooltip" title="editar"></span>
-                <%end%>
+            <td><%= link_to 'Edit', edit_sowing_path(sowing) %>
+
             </td>
-            <td><%= link_to sowing, method: :delete, data: { confirm: 'Are you sure?' } do%>
-                <span class="glyphicon glyphicon-remove-sign" data-toggle="tooltip" title="eliminar"></span>
-                <%end%>
+            <td><%= link_to 'Delete', sowing, method: :delete, data: { confirm: 'Are you sure?' } %>
+
             </td>
         </tr>
         <% end %>

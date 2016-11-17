@@ -89,12 +89,10 @@
                 </div>
             </div>
             <div class="panel-footer">
-                <%= link_to edit_genetic_bank_path(@genetic_bank) do%> 
-                <span class="glyphicon glyphicon-edit" title="editar"></span>
-                <% end %>
-                <%= link_to genetic_banks_path do%>
-                <span class="glyphicon glyphicon-arrow-left no-hover" title="atras" ></span>
-                <% end %>
+                <%= link_to 'Edit', edit_genetic_bank_path(@genetic_bank) %> 
+
+                <%= link_to 'Back', genetic_banks_path %>
+
             </div>
         </div>
     </div>

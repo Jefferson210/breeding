@@ -37,12 +37,10 @@
             </div>
 
             <div class="panel-footer">
-                <%= link_to edit_sowing_path(@sowing) do%>
-                <span class="glyphicon glyphicon-edit" title="editar"></span>
-                <%end%>
-                <%= link_to sowings_path do%>
-                <span class="glyphicon glyphicon-arrow-left no-hover" title="atras" ></span>
-                <%end%>
+                <%= link_to 'Edit', edit_sowing_path(@sowing) %>
+
+                <%= link_to 'Back', sowings_path %>
+
             </div>
         </div>
     </div>

@@ -3,9 +3,7 @@
 <h1 class="text-center alert alert-success">Children</h1>
 
 <div class="text-center">
-    <%= link_to new_child_path do %>
-    <span class="glyphicon glyphicon-file " data-toggle="tooltip" title="nuevo"></span>
-    <% end %>
+    <h3><%= link_to 'New',new_child_path %></h3>
 </div>
 
 <table class="table table-hover text-center">
@@ -34,17 +32,10 @@
             <td><%= child.numPetals %></td>
             <td><%= child.form %></td>
             <td><%= child.image_file_name ? child.image_file_name : 'N/A' %></td>
-            <td><%= link_to child do%>
-                <span class="glyphicon glyphicon-eye-open" data-toggle="tooltip" title="ver"></span>
-                <%end%>
+            <td><%= link_to "Ver", child %>
             </td>
-            <td><%= link_to edit_child_path(child) do%>
-                <span class="glyphicon glyphicon-edit" data-toggle="tooltip" title="editar"></span>
-                <%end%>
-            </td>
-            <td><%= link_to child, method: :delete, data: { confirm: 'Are you sure?' } do%>
-                <span class="glyphicon glyphicon-remove-sign" data-toggle="tooltip" title="eliminar"></span>
-                <%end%>
+            <td><%= link_to 'Editar', edit_child_path(child)%></td>
+            <td><%= link_to "Borrar",child, method: :delete, data: { confirm: 'Are you sure?' } %>
             </td>
         </tr>
         <% end %>
