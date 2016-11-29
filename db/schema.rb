@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161116234737) do
+ActiveRecord::Schema.define(version: 20161129174323) do
 
   create_table "children", force: true do |t|
     t.integer  "crossing_id"
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20161116234737) do
 
   create_table "colors", force: true do |t|
     t.string   "colorName"
-    t.string   "code"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,7 +56,7 @@ ActiveRecord::Schema.define(version: 20161116234737) do
   end
 
   create_table "genetic_banks", force: true do |t|
-    t.string   "codeBreeder"
+    t.string   "code"
     t.string   "breeder"
     t.integer  "analysedYear"
     t.string   "status"
@@ -81,6 +80,9 @@ ActiveRecord::Schema.define(version: 20161116234737) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.integer  "color_id"
+    t.string   "location"
+    t.string   "tradeMark"
+    t.string   "denomination"
   end
 
   add_index "genetic_banks", ["color_id"], name: "index_genetic_banks_on_color_id"

@@ -6,5 +6,12 @@ class GeneticBank < ActiveRecord::Base
     validates_attachment_content_type :picture, content_type: /\Aimage\/.*\Z/
 
     #    VALIDATIONS
-    validates :codeBreeder , presence:{ message:"Obligatorio"}, uniqueness: {case_sensitive: false, message:"Ya esta registrado"}
+    validates :location, uniqueness: {case_sensitive: false, message:"Ya esta registrado"}
+    
+    validates :code, presence:{ message:"Obligatorio"}, uniqueness: {case_sensitive: false, message:"Ya esta registrado"}
+    
+    validates :tradeMark, uniqueness: {case_sensitive: false, message:"Ya esta registrado"}
+    validates :denomination, uniqueness: {case_sensitive: false, message:"Ya esta registrado"}
+    
+    
 end
